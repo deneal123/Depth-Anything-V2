@@ -8,7 +8,11 @@ import torch
 
 from depth_anything_v2.dpt import DepthAnythingV2
 
+<<<<<<< HEAD
 path_to_script = os.path.dirname(os.path.abspath(__file__))
+=======
+path_to_file = os.path.dirname(os.path.abspath(__file__))
+>>>>>>> 694d5dd (v0.0.2)
 
 
 if __name__ == '__main__':
@@ -35,7 +39,11 @@ if __name__ == '__main__':
     }
     
     depth_anything = DepthAnythingV2(**model_configs[args.encoder])
+<<<<<<< HEAD
     depth_anything.load_state_dict(torch.load(f'{path_to_script}/checkpoints/depth_anything_v2_{args.encoder}.pth', map_location='cpu'))
+=======
+    depth_anything.load_state_dict(torch.load(f'{path_to_file}/checkpoints/depth_anything_v2_{args.encoder}.pth', map_location='cpu'))
+>>>>>>> 694d5dd (v0.0.2)
     depth_anything = depth_anything.to(DEVICE).eval()
     
     if os.path.isfile(args.img_path):
